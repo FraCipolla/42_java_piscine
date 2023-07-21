@@ -1,4 +1,4 @@
-package ex03;
+package ex04;
 
 import java.util.UUID;
 
@@ -9,13 +9,7 @@ public class Transaction {
     private boolean _category;
     private int _amount;
 
-    public Transaction(int sendID, int recID, int amount) {
-        this._identifier = UUID.randomUUID();
-        this._recipient = recID;
-        this._sender = sendID;
-        this._amount = amount;
-    };
-    
+    public Transaction() {};
     public Transaction(Transaction transaction) {
         this._identifier = transaction.getTranID();
         this._recipient = transaction.getRecipient();

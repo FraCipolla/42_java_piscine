@@ -1,4 +1,4 @@
-package ex03;
+package ex05;
 
 public interface UsersList {
     public User addUser(String name, int balance);

@@ -1,23 +1,36 @@
 package ex02;
-import ex02.User;
-
 public class Program {
-    static int id = 0;
-    public static void main(String[] args) {
-        System.out.println("Creating user Gouken, with tremenodus balance");
 
-        User user1 = new User("Gouken", 10000000);
+	static public void	main(String[] args) {
+		
+		UsersArrayList usersAr = new UsersArrayList();
 
-        System.out.println("User id: " + user1.getID());
-        System.out.println("User name: " + user1.getName());
-        System.out.println("User balance: " + user1.getBalance());
+		System.out.println("Array size = " + usersAr.nUser());
+		System.out.println("Adding Bob to the array");
+		usersAr.addUser("bob", 100);
+		System.out.println("Array size = " + usersAr.nUser());
+		
+		System.out.println("Printing user ad position 1");
+		System.out.println(usersAr.retrieveByIndex(0));
 
-        System.out.println("Creating user Blanka, gnegne");
-
-        User user2 = new User("Blanka", 10000000);
-
-        System.out.println("User id: " + user2.getID());
-        System.out.println("User name: " + user2.getName());
-        System.out.println("User balance: " + user2.getBalance());
-    }
+		System.out.println("Printing user ad position 2");
+		System.out.println(usersAr.retrieveByIndex(1));
+		
+		System.out.println("Adding John to the array");
+		usersAr.addUser("John", 100);
+		System.out.println("Array size = " + usersAr.nUser());
+		
+		System.out.println("Adding multiple users to check array size increase");
+		
+		System.out.println("Starting max capacity " + usersAr.getCapacity());
+		int current = usersAr.getCapacity();
+        for (int i = 0; i < 50; i++) {
+			if (usersAr.nUser() == current) {
+				System.out.println("Array size = " + usersAr.nUser());
+				System.out.println("Total Capacity = " + usersAr.getCapacity());
+				current = usersAr.getCapacity();
+			}
+			usersAr.addUser("Carlo" + i, 10);
+        }
+	}
 }

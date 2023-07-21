@@ -1,5 +1,3 @@
-package ex01;
-
 public class UserIdsGenerator {
     // unica instanza della classe
     private static UserIdsGenerator instance = null;

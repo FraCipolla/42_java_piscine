@@ -8,7 +8,8 @@ public class Program {
         int n = input.nextInt();
 
         if (n <= 0) {
-            System.err.println("IllegalArgument\n");
+            System.err.println("IllegalArgument");
+            System.exit(-1);
         }
         int steps = 0;
         int i = 2;

@@ -16,18 +16,10 @@ public class Transaction {
     public boolean getCat() { return this._category; }
     public int getAmount() { return this._amount; }
 
-    public void setTransaction(UUID id, int recID, int sendID, int amount, boolean category) {
-        if (category == false && amount > 0) {
-            System.err.println("debit must be negative");
-            System.exit(-1);
-        } else if (category == true && amount < 0) {
-            System.err.println("credit must be positive");
-            System.exit(-1);
-        }
-        this._identifier = id;
+    public void setTransaction(int recID, int sendID, int amount) {
+        this._identifier = UUID.randomUUID();
         this._recipient = recID;
         this._sender = sendID;
         this._amount = amount;
-        this._category = category;
     }
 }

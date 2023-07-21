@@ -1,18 +1,15 @@
 package ex02;
 
-/**
- * UsersList
- */
 public interface UsersList {
-    public void addUser(User user);
-    public User retrieveById(int id) throws UserNotFoundException;
-    public User retrieveByIndex(int index) throws UserNotFoundException;
+    public User addUser(String name, int balance);
+    public User retrieveById(int id);
+    public User retrieveByIndex(int index);
     public int  nUser();
     
-    public class UserNotFoundException extends Exception {
+    public class UserNotFoundException extends RuntimeException {
     
         public UserNotFoundException(String error) {
-            super(error);
+            super("\n" + error + "\n");
         }
     }
     

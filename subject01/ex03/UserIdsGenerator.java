@@ -15,7 +15,7 @@ public class UserIdsGenerator {
         return instance;
     }
     
-    private int _id = 0;
+    private int _id = 1;
     
     public int generateId() {
         return this._id++;

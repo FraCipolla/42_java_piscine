@@ -1,6 +1,5 @@
 package ex01;
 
-
 public class User {
     public final int _ID;
     private String _name;

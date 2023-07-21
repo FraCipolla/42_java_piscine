@@ -1,5 +1,4 @@
 package ex01;
-import ex01.User;
 
 public class Program {
     static int id = 0;
@@ -19,5 +18,6 @@ public class Program {
         System.out.println("User id: " + user2.getID());
         System.out.println("User name: " + user2.getName());
         System.out.println("User balance: " + user2.getBalance());
+
     }
 }

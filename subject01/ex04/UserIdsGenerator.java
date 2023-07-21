@@ -1,4 +1,4 @@
-package ex02;
+package ex04;
 
 public class UserIdsGenerator {
     // unica instanza della classe

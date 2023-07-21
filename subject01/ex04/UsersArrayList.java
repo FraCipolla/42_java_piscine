@@ -1,4 +1,4 @@
-package ex03;
+package ex04;
 
 public class UsersArrayList implements UsersList {
 
@@ -29,21 +29,21 @@ public class UsersArrayList implements UsersList {
         return newUser;
     };
 
-    public User retrieveById(int id)  {
+    public User retrieveById(int id) {
         User tmp = null;
-
-        for (int i = 0; i < this._size; i++) {
-            if (this._store[i].getID() == id) {
-                tmp = this._store[i];
+        try {
+            for (int i = 0; i < this._size; i++) {
+                if (this._store[i].getID() == id) {
+                    tmp = this._store[i];
+                }
             }
-        }
-        if (tmp == null) {
+        } catch (UserNotFoundException err) {
             throw new UserNotFoundException("user with that id doesn't exist");
         }
         return tmp;
     };
 
-    public User retrieveByIndex(int index) {
+    public User retrieveByIndex(int index){
         User tmp = this._store[index];
         if (tmp == null) {
             throw new UserNotFoundException("no user at that index!");

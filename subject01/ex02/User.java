@@ -1,8 +1,7 @@
 package ex02;
 
-
 public class User {
-    public final int _ID;
+    public  int _ID;
     private String _name;
     private int _balance;
  
@@ -14,11 +13,13 @@ public class User {
         }
         this._balance = balance;
         this._name = name;
-        this._ID = UserIdsGenerator.getInstance().generateId();
     }
 
     // GETTERS
     public int getID() { return this._ID; }
     public String getName() { return this._name; }
     public int getBalance() { return this._balance; }
+
+    public void add(int amount) { this._balance += amount; }
+    public void decrease(int amount) { this._balance -= amount; }
 }
