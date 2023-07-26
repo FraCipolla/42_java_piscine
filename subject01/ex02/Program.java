@@ -12,9 +12,6 @@ public class Program {
 		
 		System.out.println("Printing user ad position 1");
 		System.out.println(usersAr.retrieveByIndex(0));
-
-		System.out.println("Printing user ad position 2");
-		System.out.println(usersAr.retrieveByIndex(1));
 		
 		System.out.println("Adding John to the array");
 		usersAr.addUser("John", 100);
@@ -32,5 +29,9 @@ public class Program {
 			}
 			usersAr.addUser("Carlo" + i, 10);
         }
+
+		
+		System.out.println("Printing user ad position 1000 - ginving error");
+		System.out.println(usersAr.retrieveByIndex(1000));
 	}
 }

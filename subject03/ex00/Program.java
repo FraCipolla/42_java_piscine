@@ -16,12 +16,15 @@ public class Program {
             System.exit(-1);
         }
         int count = Integer.parseInt(split[1]);
-        myThread thread = new myThread("Egg", count);
-        thread.start();
+        myThread thread1 = new myThread("Egg", count);
         myThread thread2 = new myThread("Hen", count);
-        thread2.start();
-        for (int i = 0; i < count; i++) {
-            System.out.println("Human " + i);
+        Thread t1 = new Thread(thread1);
+        t1.start();
+        Thread t2 = new Thread(thread2);
+        t2.start();
+
+        for (int i = 0; i < count; i ++) {
+            System.out.println("Human");
         }
     }
 }
